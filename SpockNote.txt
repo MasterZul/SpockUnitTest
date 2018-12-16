@@ -1,0 +1,40 @@
+given: precondition
+when: action that trigger some outcome
+then: makes assertion about outcome
+expect: short alt to when & then
+and: sub divide others block
+setup: alias for given
+cleanup: post-condition houekeeping
+where:
+
+@Unroll to report the variable value
+@Title
+@Narrative
+@Issue
+@See
+@Subject
+
+@Require: It require if want to run the test (eg: it require java 8 to run it)
+@IgnoreIf
+@Ignore
+@IgnoreRest
+
+@AutoCleanup
+@AutoCleanup('dispose')
+@AutoCleanup(quite=true)
+
+@Timeout
+@timeout(10)
+
+Dummy : no need it but need for satisfy like paramter
+Fake : not production, in-memory database
+Stub : Objects with "canned" answers, Some times record interaction (to satisfy requirement)
+Mock: Objects with pre-programmed expectation, Testing for behaviour instead of state
+
+Spock Stub : not verified [ Empty, Dummy object] => STUB(false, true, EmptyOrDummy.INSTANCE)
+
+Spock Mock : verified [zero, null] => MOCK(true, true, ZeroOrNullResponse.INSTANCE)
+
+Spock Spy : verified [delegated calls to real object, unless programmed to do oterwise] => MOCK(true, false, CallEasyEmpty.INSTANCE)
+
+
